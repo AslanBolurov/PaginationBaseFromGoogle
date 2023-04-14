@@ -20,6 +20,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import java.time.LocalDateTime
 
+private const val STARTING_KEY = 0
+
+
 private val firstArticleCreatedTime = LocalDateTime.now()
 
 class ArticleRepository {
