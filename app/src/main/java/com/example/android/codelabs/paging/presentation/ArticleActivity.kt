@@ -1,4 +1,4 @@
-package com.example.android.codelabs.paging.ui
+package com.example.android.codelabs.paging.presentation
 
 import android.os.Bundle
 import androidx.activity.viewModels

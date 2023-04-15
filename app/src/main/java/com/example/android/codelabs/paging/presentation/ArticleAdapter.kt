@@ -1,10 +1,9 @@
-package com.example.android.codelabs.paging.ui
+package com.example.android.codelabs.paging.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.ListAdapter
 import com.example.android.codelabs.paging.data.Article
 import com.example.android.codelabs.paging.databinding.ArticleViewholderBinding
 

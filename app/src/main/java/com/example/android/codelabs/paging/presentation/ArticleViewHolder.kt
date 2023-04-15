@@ -1,4 +1,4 @@
-package com.example.android.codelabs.paging.ui
+package com.example.android.codelabs.paging.presentation
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.codelabs.paging.data.Article

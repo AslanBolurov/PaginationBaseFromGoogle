@@ -1,6 +1,8 @@
 package com.example.android.codelabs.paging.data
 
-class ArticleRepository {
+import com.example.android.codelabs.paging.domain.ArticleRepository
 
-    fun articlePagingSource() = ArticlePagingSource()
+class ArticleRepositoryImpl: ArticleRepository {
+
+    override fun articlePagingSource() = ArticlePagingSource()
 }

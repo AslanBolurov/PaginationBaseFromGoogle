@@ -1,19 +1,19 @@
 package com.example.android.codelabs.paging
 
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.savedstate.SavedStateRegistryOwner
-import com.example.android.codelabs.paging.data.ArticleRepository
-import com.example.android.codelabs.paging.ui.ViewModelFactory
+import com.example.android.codelabs.paging.data.ArticleRepositoryImpl
+import com.example.android.codelabs.paging.domain.GetPagingSourceUseCase
+import com.example.android.codelabs.paging.presentation.ViewModelFactory
 
 object Injection {
 
-    private fun provideArticleRepository(): ArticleRepository =
-        ArticleRepository()
+    val provideArticleRepository = ArticleRepositoryImpl()
+    private fun provideGetPagingSourceUseCase()=GetPagingSourceUseCase(provideArticleRepository)
 
     fun provideViewModelFactory(
         owner: SavedStateRegistryOwner
     ): ViewModelProvider.Factory {
-        return ViewModelFactory(owner, provideArticleRepository())
+        return ViewModelFactory(owner,provideGetPagingSourceUseCase())
     }
 }
